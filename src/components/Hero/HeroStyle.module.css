@@ -1,14 +1,17 @@
 .container {
+  height: 83vh;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  gap: 20px;
+  gap: 4rem;
   text-align: center;
-  /* height: 100dvh; */
-  /* min-height: 500px; */
 
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .heroImg {
-    max-width: 200px;
+    max-width: 300px;
   }
 
   span {
@@ -51,24 +54,26 @@
   }
 }
 
-.colorModeContainer {
+/* .colorModeContainer {
   position: relative;
-}
+} */
 
-.colorMode {
+/* .colorMode {
   position: absolute;
   right: 0;
   width: 25px;
-}
-.colorMode:hover {
+} */
+/* .colorMode:hover {
   cursor: pointer;
-}
+} */
 .description {
+  display: flex;
+  justify-content: center;
   max-width: 24ch;
 }
 .info {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   gap: 20px;
 }
