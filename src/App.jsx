@@ -4,7 +4,7 @@ import {
   AboutMe,
   ContactMe,
   Courses,
-  // Header,
+  Header,
   Hero,
   Projects,
   Skills,
@@ -15,15 +15,15 @@ import {
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Hero />
-      <AboutMe />
+      {/* <AboutMe />
       <Projects />
       <Skills />
       <WorkExperience />
       <Courses />
       <ContactMe />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
