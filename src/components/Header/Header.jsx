@@ -5,7 +5,6 @@ import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
 import { useTheme } from "../../common/ThemeContext";
 
-
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const themeIcon = theme === "light" ? sun : moon;
@@ -38,14 +37,14 @@ const Header = () => {
         </div>
         <div>
           <img
-          src={themeIcon}
-          alt="Theme mode icon"
-          className={styles.colorMode}
-          onClick={toggleTheme}
-        />
+            src={themeIcon}
+            alt="Theme mode icon"
+            className={styles.colorMode}
+            onClick={toggleTheme}
+          />
         </div>
       </nav>
-      <nav id="nav-menu">
+      {/* <nav id="nav-menu">
         <div className="logo">Zaky Aly</div>
         <div className="dropdown-menu">
           <div class="menu-icon" onclick="toggleMenu()">
@@ -88,7 +87,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> */}
     </>
   );
 };

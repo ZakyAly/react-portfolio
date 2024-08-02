@@ -1,9 +1,5 @@
 /* DESKTOP NAV */
 
-.navLinks {
-  display: flex;
-}
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -11,16 +7,24 @@ nav {
   height: 17vh;
 }
 
-.nav-links {
-  gap: 3rem;
+.navLinks {
+  background-color: var(--background-color);
+  display: flex;
+  gap: 1rem;
+}
+
+/* .nav-links {
   list-style: none;
   font-size: 1.5rem;
-}
+} */
 
 a {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
+}
+li {
+  list-style: none;
 }
 
 a:hover {
@@ -36,6 +40,17 @@ a:hover {
 
 .logo:hover {
   cursor: default;
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  width: 25px;
+}
+.colorMode:hover {
+  cursor: pointer;
 }
 
 /* HAMBURGER MENU */
@@ -84,10 +99,6 @@ a:hover {
   color: black;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-  list-style: none;
 }
 
 .menu-links.open {
