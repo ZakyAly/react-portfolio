@@ -37,6 +37,12 @@ const Hero = () => {
         <p className={styles.description}>Hello, I'm</p>
         <h1>Zaky Aly</h1>
         <h2>Frontend Developer</h2>
+        {/* <p className={styles.description}>
+          With a passion for building and developing modern web apps.
+        </p> */}
+        <a href={CV} download>
+          <button className="hover">Resume</button>
+        </a>
         <span>
           <a href="https://github.com/ZakyAly" target="_blank">
             <img src={githubIcon} alt="" />
@@ -45,12 +51,6 @@ const Hero = () => {
             <img src={linkedinIcon} alt="linkedin" />
           </a>
         </span>
-        {/* <p className={styles.description}>
-          With a passion for building and developing modern web apps.
-        </p> */}
-        <a href={CV} download>
-          <button className="hover">Resume</button>
-        </a>
       </div>
     </section>
   );
