@@ -37,16 +37,17 @@
     background-color: var(--btn-color);
     color: var(--btn-text-color);
     border: none;
-    border-radius: 40px;
+    border-radius: 2rem;
     width: 126px;
     height: 50px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   }
   button:hover {
     transform: scale(1.05);
+    cursor: pointer;
   }
   button:active {
     transform: translateY(2px);
@@ -58,11 +59,11 @@
   position: relative;
 } */
 
-/* .colorMode {
-  position: absolute;
-  right: 0;
+.colorMode {
+  /* position: absolute; */
+  /* right: 0; */
   width: 25px;
-} */
+}
 /* .colorMode:hover {
   cursor: pointer;
 } */
@@ -76,4 +77,24 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btnContainer a button {
+  width: 8rem;
+  font-size: 0.8rem;
+  box-shadow: none;
+}
+.btnContainer .cvBtn {
+  background-color: #ffffff;
+  color: #000;
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+.btnContainer .contactBtn {
+  background: rgb(53, 53, 53);
+  color: white;
 }

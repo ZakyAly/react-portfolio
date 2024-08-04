@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./HeaderStyle.module.css";
 
-import sun from "../../assets/sun.svg";
-import moon from "../../assets/moon.svg";
-import { useTheme } from "../../common/ThemeContext";
-
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
-  const themeIcon = theme === "light" ? sun : moon;
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <>
-      <nav id="desktop-nav">
+      <nav id={styles.desktopNav}>
         <div className={styles.logo}>Zaky Aly</div>
         <div>
           <ul className={styles.navLinks}>
@@ -35,59 +34,51 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <img
-            src={themeIcon}
-            alt="Theme mode icon"
-            className={styles.colorMode}
-            onClick={toggleTheme}
-          />
-        </div>
       </nav>
-      {/* <nav id="nav-menu">
-        <div className="logo">Zaky Aly</div>
-        <div className="dropdown-menu">
-          <div class="menu-icon" onclick="toggleMenu()">
+      <nav id={styles.navMenu}>
+        <div className={styles.logo}>Zaky Aly</div>
+        <div className={styles.dropdownMenu}>
+          <div className={styles.menuIcon} onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
         <div>
-          <ul className={styles.navLinks}>
+          <ul className={`${styles.menuLinks} ${menuOpen ? styles.open : ""}`}>
             <li>
-              <a href="#about" onclick="toggleMenu()">
+              <a href="#about" onClick={toggleMenu}>
                 About Me
               </a>
             </li>
             <li>
-              <a href="#projects" onclick="toggleMenu()">
+              <a href="#projects" onClick={toggleMenu}>
                 Projects
               </a>
             </li>
             <li>
-              <a href="#skills" onclick="toggleMenu()">
+              <a href="#skills" onClick={toggleMenu}>
                 Skills
               </a>
             </li>
             <li>
-              <a href="#experience" onclick="toggleMenu()">
+              <a href="#experience" onClick={toggleMenu}>
                 Experience
               </a>
             </li>
             <li>
-              <a href="#courses" onclick="toggleMenu()">
+              <a href="#courses" onClick={toggleMenu}>
                 Courses
               </a>
             </li>
             <li>
-              <a href="#contact" onclick="toggleMenu()">
+              <a href="#contact" onClick={toggleMenu}>
                 Contact Me
               </a>
             </li>
           </ul>
         </div>
-      </nav> */}
+      </nav>
     </>
   );
 };

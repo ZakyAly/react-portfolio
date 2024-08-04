@@ -40,9 +40,14 @@ const Hero = () => {
         {/* <p className={styles.description}>
           With a passion for building and developing modern web apps.
         </p> */}
-        <a href={CV} download>
-          <button className="hover">Resume</button>
-        </a>
+        <div className={styles.btnContainer}>
+          <a href={CV} download>
+            <button className={styles.cvBtn}>Download CV</button>
+          </a>
+          <a href={CV} download>
+            <button className={styles.contactBtn}>Contact Info</button>
+          </a>
+        </div>
         <span>
           <a href="https://github.com/ZakyAly" target="_blank">
             <img src={githubIcon} alt="" />
